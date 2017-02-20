@@ -52,7 +52,7 @@ void MOVE::onSetup(int eA, int a1, int a2, int eB, int b1, int b2)
   pinMode(MOVE::in3, OUTPUT);
   pinMode(MOVE::in4, OUTPUT);
 
-	MOVE::off();
+  MOVE::off();
 }
 
 void MOVE::kill()

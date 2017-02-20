@@ -48,9 +48,9 @@ void IMU::calculate(float raw_accl_x, float raw_accl_y, float raw_accl_z,
 
 void IMU::configure(float in_declination, float in_hardiron_x,
                     float in_hardiron_y, float in_hardiron_z){
-    declination = in_declination;
-    hardiron_x = in_hardiron_x;
-    hardiron_y = in_hardiron_y;
-    hardiron_z = in_hardiron_z;
-    IMU::rad_factor = 57.2957;
+  declination = in_declination;
+  hardiron_x = in_hardiron_x;
+  hardiron_y = in_hardiron_y;
+  hardiron_z = in_hardiron_z;
+  IMU::rad_factor = 57.2957;
 }

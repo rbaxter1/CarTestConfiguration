@@ -6,7 +6,7 @@ void LIDAR::onSetup(){}
 
 int LIDAR::read()
 {
-	Wire.beginTransmission((int)LIDARLite_ADDRESS); // transmit to LIDAR-Lite
+  Wire.beginTransmission((int)LIDARLite_ADDRESS); // transmit to LIDAR-Lite
   Wire.write((int)RegisterMeasure); // sets register pointer to  (0x00)  
   Wire.write((int)MeasureValue); // sets register pointer to  (0x00)  
   Wire.endTransmission(); // stop transmitting

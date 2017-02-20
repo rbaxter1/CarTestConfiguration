@@ -13,8 +13,8 @@ float IMU::declination;
 // https://gist.github.com/srlm-io/fafee8feed8bd5661266
 // https://github.com/RoboSail/RoboSail/blob/master/Libraries/Orientation/Orientation.h
 void IMU::calculate(float raw_accl_x, float raw_accl_y, float raw_accl_z,
-										float raw_magn_x, float raw_magn_y, float raw_magn_z,
-										float& heading, float& pitch, float& roll)
+                    float raw_magn_x, float raw_magn_y, float raw_magn_z,
+                    float& heading, float& pitch, float& roll)
 {
   float accl_x = -raw_accl_x;
   float accl_y = raw_accl_y;
@@ -47,7 +47,7 @@ void IMU::calculate(float raw_accl_x, float raw_accl_y, float raw_accl_z,
 }
 
 void IMU::configure(float in_declination, float in_hardiron_x,
-										float in_hardiron_y, float in_hardiron_z){
+                    float in_hardiron_y, float in_hardiron_z){
     declination = in_declination;
     hardiron_x = in_hardiron_x;
     hardiron_y = in_hardiron_y;

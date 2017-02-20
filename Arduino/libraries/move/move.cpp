@@ -38,14 +38,14 @@ void MOVE::off()
 	
 void MOVE::onSetup(int eA, int a1, int a2, int eB, int b1, int b2)
 {
-	MOVE::enA = eA;
-	MOVE::in1 = a1;
-	MOVE::in1 = a2;
-	MOVE::enB = eB;
-	MOVE::in3 = b1;
-	MOVE::in4 = b2;
+  MOVE::enA = eA;
+  MOVE::in1 = a1;
+  MOVE::in1 = a2;
+  MOVE::enB = eB;
+  MOVE::in3 = b1;
+  MOVE::in4 = b2;
 	
-	pinMode(MOVE::enA, OUTPUT);
+  pinMode(MOVE::enA, OUTPUT);
   pinMode(MOVE::enB, OUTPUT);
   pinMode(MOVE::in1, OUTPUT);
   pinMode(MOVE::in2, OUTPUT);
@@ -57,19 +57,19 @@ void MOVE::onSetup(int eA, int a1, int a2, int eB, int b1, int b2)
 
 void MOVE::kill()
 {
-	MOVE::off();
+  MOVE::off();
 }
 
 void MOVE::setTurn(bool dir, int power)
 {
-	digitalWrite(in3, dir ? HIGH : LOW);
+  digitalWrite(in3, dir ? HIGH : LOW);
   digitalWrite(in4, dir ? LOW : HIGH);
   analogWrite(enB, validatePower(power));
 }
 	
 void MOVE::setGear(bool dir, int power)
 {
-	digitalWrite(in1, dir ? HIGH : LOW);
+  digitalWrite(in1, dir ? HIGH : LOW);
   digitalWrite(in2, dir ? LOW : HIGH);
   analogWrite(enA, validatePower(power));
 }
